@@ -11,6 +11,14 @@ git config --global http.sslCAInfo /home/pasa/Job/git-certs/github-com.pem
 git config http.sslCAInfo /home/pasa/Job/git-certs/private-repo.pem
 ```
 
+## Delete removed origin branches locally
+
+```
+git fetch -p
+git branch -vv | grep "gone" | awk '{print $1}' | xargs git branch -D
+```
+
+
 
 # PyPI
 
