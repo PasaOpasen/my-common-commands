@@ -15,7 +15,7 @@ git config http.sslCAInfo /home/pasa/Job/git-certs/private-repo.pem
 
 ```
 git fetch -p
-git branch -vv | grep "gone" | awk '{print $1}' | xargs git branch -D
+git branch -vv | grep "gone\исчез" | awk '{print $1}' | xargs git branch -D
 ```
 
 
