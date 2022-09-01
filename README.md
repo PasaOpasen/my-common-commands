@@ -18,6 +18,12 @@ git fetch -p
 git branch -vv | grep "gone\|исчез" | awk '{print $1}' | xargs git branch -D
 ```
 
+## Revert to commit
+
+```
+git reset --hard 647ccba5eb992afcf03f8ec46548ebf4b7a9a962
+git push -f origin 647ccba5eb992afcf03f8ec46548ebf4b7a9a962:main
+```
 
 
 # PyPI
