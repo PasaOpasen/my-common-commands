@@ -25,6 +25,13 @@ git reset --hard 647ccba5eb992afcf03f8ec46548ebf4b7a9a962
 git push -f origin 647ccba5eb992afcf03f8ec46548ebf4b7a9a962:main
 ```
 
+## Remove all new changes:
+
+```
+git clean -fd
+git restore .
+```
+
 
 # PyPI
 
