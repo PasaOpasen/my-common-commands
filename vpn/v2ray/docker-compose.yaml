@@ -1,0 +1,14 @@
+version: '3'
+services:
+  v2ray:
+    image: teddysun/v2ray
+    volumes:
+      - ./v2ray:/etc/v2ray
+    ports:
+      - "9001:9001"
+      - "9001:9001/udp"
+    # restart: always
+
+
+# runs by
+# docker-compose up -d

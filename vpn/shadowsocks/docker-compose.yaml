@@ -1,0 +1,101 @@
+version: '3'
+services:
+  shadowsocks1:
+    image: shadowsocks/shadowsocks-libev:latest   
+    environment:
+      - TZ=Europe/Moscow
+      - PASSWORD=dVBpnKfhTbXSwKznzaPnQbfaeRVpbjwrABPkBpQd
+      - METHOD=chacha20-ietf-poly1305
+      - ARGS=--fast-open
+    ports:
+      - "8390:8388"
+      - "8390:8388/udp"
+    restart: unless-stopped
+  
+  shadowsocks2:
+    image: shadowsocks/shadowsocks-libev:latest   
+    environment:
+      - TZ=Europe/Moscow
+      - PASSWORD=dVBpnKfhTbXSwKznzaPnQbfaeRVpbjwrABPkBpQd
+      - METHOD=rc4-md5
+      - ARGS=--fast-open
+    ports:
+      - "8391:8388"
+      - "8391:8388/udp"
+    restart: unless-stopped
+  
+  shadowsocks3:
+    image: shadowsocks/shadowsocks-libev:latest   
+    environment:
+      - TZ=Europe/Moscow
+      - PASSWORD=dVBpnKfhTbXSwKznzaPnQbfaeRVpbjwrABPkBpQd
+      - METHOD=aes-256-cfb
+      - ARGS=--fast-open
+    ports:
+      - "8392:8388"
+      - "8392:8388/udp"
+    restart: unless-stopped
+
+  shadowsocks4:
+    image: shadowsocks/shadowsocks-libev:latest   
+    environment:
+      - TZ=Europe/Moscow
+      - PASSWORD=dVBpnKfhTbXSwKznzaPnQbfaeRVpbjwrABPkBpQd
+      - METHOD=aes-256-ctr
+      - ARGS=--fast-open
+    ports:
+      - "8393:8388"
+      - "8393:8388/udp"
+    restart: unless-stopped
+
+  shadowsocks5:
+    image: shadowsocks/shadowsocks-libev:latest   
+    environment:
+      - TZ=Europe/Moscow
+      - PASSWORD=dVBpnKfhTbXSwKznzaPnQbfaeRVpbjwrABPkBpQd
+      - METHOD=bf-cfb
+      - ARGS=--fast-open
+    ports:
+      - "8394:8388"
+      - "8394:8388/udp"
+    restart: unless-stopped
+
+  shadowsocks6:
+    image: shadowsocks/shadowsocks-libev:latest   
+    environment:
+      - TZ=Europe/Moscow
+      - PASSWORD=dVBpnKfhTbXSwKznzaPnQbfaeRVpbjwrABPkBpQd
+      - METHOD=camellia-256-cfb
+      - ARGS=--fast-open
+    ports:
+      - "8395:8388"
+      - "8395:8388/udp"
+    restart: unless-stopped
+
+  shadowsocks7:
+    image: shadowsocks/shadowsocks-libev:latest   
+    environment:
+      - TZ=Europe/Moscow
+      - PASSWORD=dVBpnKfhTbXSwKznzaPnQbfaeRVpbjwrABPkBpQd
+      - METHOD=aes-256-gcm
+      - ARGS=--fast-open
+    ports:
+      - "8396:8388"
+      - "8396:8388/udp"
+    restart: unless-stopped
+
+  shadowsocks8:
+    image: shadowsocks/shadowsocks-libev:latest   
+    environment:
+      - TZ=Europe/Moscow
+      - PASSWORD=dVBpnKfhTbXSwKznzaPnQbfaeRVpbjwrABPkBpQd
+      - METHOD=xchacha20-ietf-poly1305
+      - ARGS=--fast-open
+    ports:
+      - "8397:8388"
+      - "8397:8388/udp"
+    restart: unless-stopped
+
+
+# runs by
+# docker-compose up -d
